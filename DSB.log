@@ -1,0 +1,19 @@
+Time: 1/22/2016 8:14:11 AM
+Tag: Database Error
+Error: Concurrency violation: the DeleteCommand affected 0 of the expected 1 records.
+Stack:
+   at System.Data.Common.DbDataAdapter.UpdatedRowStatusErrors(RowUpdatedEventArgs rowUpdatedEvent, BatchCommandInfo[] batchCommands, Int32 commandCount)
+   at System.Data.Common.DbDataAdapter.UpdatedRowStatus(RowUpdatedEventArgs rowUpdatedEvent, BatchCommandInfo[] batchCommands, Int32 commandCount)
+   at System.Data.Common.DbDataAdapter.Update(DataRow[] dataRows, DataTableMapping tableMapping)
+   at System.Data.Common.DbDataAdapter.UpdateFromDataTable(DataTable dataTable, DataTableMapping tableMapping)
+   at System.Data.Common.DbDataAdapter.Update(DataTable dataTable)
+   at DiamondBuilderUI.DBSync.PostgresToAccess.TableSyncInfo.CommitChanges() in c:\Builds\2\Diamond System Builder\DiamondSystemBuilder Branch\Sources\UI\DiamondBuilderUI\DBSync\PostgresToAccess.cs:line 403
+   at DiamondBuilderUI.DBSync.PostgresToAccess.bw_DoWorkInner(Object sender, DoWorkEventArgs e, NpgsqlConnection SourceConnection, OleDbConnection DestinationConnection) in c:\Builds\2\Diamond System Builder\DiamondSystemBuilder Branch\Sources\UI\DiamondBuilderUI\DBSync\PostgresToAccess.cs:line 595
+   at DiamondBuilderUI.DBSync.PostgresToAccess.bw_DoWork(Object sender, DoWorkEventArgs e) in c:\Builds\2\Diamond System Builder\DiamondSystemBuilder Branch\Sources\UI\DiamondBuilderUI\DBSync\PostgresToAccess.cs:line 493
+   at System.ComponentModel.BackgroundWorker.OnDoWork(DoWorkEventArgs e)
+   at System.ComponentModel.BackgroundWorker.WorkerThreadStart(Object argument)
+Object: System.Data
+Function: Int32 UpdatedRowStatusErrors(System.Data.Common.RowUpdatedEventArgs, BatchCommandInfo[], Int32)
+Extra data:
+SmartStackFrames - System.Collections.Generic.LinkedList`1[System.Object]
+-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
